@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DIN2014.otf">
+            <string>DIN2014-Regular</string>
+        </array>
+        <array key="NotoSansCJKjp-Regular.otf">
+            <string>NotoSansCJKjp-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrimmingViewController" customModule="Trimming" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundScrollView" destination="dth-3f-vbq" id="YmN-ey-5lk"/>
+                <outlet property="buttonsStackView" destination="VFh-IB-mDk" id="B3g-yb-0H0"/>
+                <outlet property="okButton" destination="n0O-4u-c4y" id="t5t-zY-Ah4"/>
+                <outlet property="view" destination="H6C-6N-S51" id="1Ec-yM-gAh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="H6C-6N-S51">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" maximumZoomScale="10" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dth-3f-vbq">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="33L-cd-zHe"/>
+                    </connections>
+                </scrollView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VFh-IB-mDk">
+                    <rect key="frame" x="151" y="619" width="112" height="63"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0O-4u-c4y">
+                            <rect key="frame" x="0.0" y="0.0" width="112" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="112" id="HO5-U6-CiK"/>
+                                <constraint firstAttribute="height" constant="24" id="ygR-C7-hnc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DIN2014-Regular" family="DIN 2014" pointSize="12"/>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" name="AccentColor"/>
+                            </state>
+                            <connections>
+                                <action selector="tapOkButton:" destination="-1" eventType="touchUpInside" id="spV-5T-Bco"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2f-gI-dT6">
+                            <rect key="frame" x="0.0" y="39" width="112" height="24"/>
+                            <fontDescription key="fontDescription" name="NotoSansCJKjp-Regular" family="Noto Sans CJK JP" pointSize="12"/>
+                            <state key="normal" title="キャンセル">
+                                <color key="titleColor" name="GrayscaleWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tapCancelButton:" destination="-1" eventType="touchUpInside" id="Fvs-Vz-GAN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="aA9-9m-RIY"/>
+            <color key="backgroundColor" white="0.0" alpha="0.30048694349315069" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dth-3f-vbq" secondAttribute="bottom" id="EKv-YK-YnF"/>
+                <constraint firstItem="dth-3f-vbq" firstAttribute="top" secondItem="H6C-6N-S51" secondAttribute="top" id="Eig-6E-8n1"/>
+                <constraint firstItem="dth-3f-vbq" firstAttribute="trailing" secondItem="H6C-6N-S51" secondAttribute="trailing" id="NMb-H9-DAm"/>
+                <constraint firstItem="VFh-IB-mDk" firstAttribute="centerX" secondItem="H6C-6N-S51" secondAttribute="centerX" id="irx-Cp-ams"/>
+                <constraint firstAttribute="bottom" secondItem="VFh-IB-mDk" secondAttribute="bottom" constant="54" id="oB6-7P-9ms"/>
+                <constraint firstItem="dth-3f-vbq" firstAttribute="leading" secondItem="H6C-6N-S51" secondAttribute="leading" id="s6y-gw-mUZ"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <point key="canvasLocation" x="79.710144927536234" y="120.53571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GrayscaleWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
